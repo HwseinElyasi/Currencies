@@ -68,7 +68,7 @@ class ViewMarketActivity(
 
         aboutDataMap = mutableMapOf<String , CoinAboutItem>()
 
-        //از applicationContext استفاده میکنیم چون ممکنه ما بریم یه اکتیویتی دیگه و خود کانتکس تغییر کنه...
+
         val fileInString = context.applicationContext.assets
             .open("currencyinfo.json")
             .bufferedReader()
@@ -77,7 +77,7 @@ class ViewMarketActivity(
         val gson = Gson()
         val dataAboutAll = gson.fromJson(fileInString, CoinAboutData::class.java)
         dataAboutAll.forEach {
-            //اینجا میگم که کلیدایی که داخل اون جیسون لوکال که تبدیلش کردیم به دیتا کلاس هرچی که بود بیا و داده هاش رو مثلا ادرس وبسایت و گبت هاب و ایناشو بریز داخل دیتاکلاسی ک خودم ساختم و اون اطلاعاتی که لازم دارم رو داخلش تعریف کردم
+
             aboutDataMap[it.currencyName] = CoinAboutItem(
                 it.info.web,
                 it.info.github,
@@ -150,7 +150,7 @@ class ViewMarketActivity(
 
         binding.swipeRefresh.setOnRefreshListener {
 
-            Toast.makeText(context, "اطلاعات آپدیت شدند!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "اطلاعات به روز شدند!", Toast.LENGTH_SHORT).show()
 
             showCoinInMarketActivity(data2)
             showNewsOrChange(data1)

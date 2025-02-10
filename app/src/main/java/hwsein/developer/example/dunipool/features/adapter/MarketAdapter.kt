@@ -78,9 +78,7 @@ class MarketAdapter(
 
         }
 
-
     }
-
 
     interface CallBakAdapter {
 

@@ -24,7 +24,7 @@ class CoinActivity : AppCompatActivity() {
 
 
         presenter.setDataFromActivityAndChartDataFromServer(statistics)
-        view.setAboutData(about)
+        presenter.receivedAboutDataFromActivity(about)
 
 
     }

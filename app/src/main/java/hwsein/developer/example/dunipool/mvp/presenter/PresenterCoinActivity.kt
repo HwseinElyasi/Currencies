@@ -1,6 +1,7 @@
 package hwsein.developer.example.dunipool.mvp.presenter
 
 import ChartData
+import hwsein.developer.example.dunipool.local.CoinAboutItem
 import hwsein.developer.example.dunipool.mvp.model.ModelCoinActivity
 import hwsein.developer.example.dunipool.mvp.view.ViewCoinActivity
 import hwsein.developer.example.dunipool.remote.CallBackManager
@@ -40,6 +41,12 @@ class PresenterCoinActivity(
             }
 
         })
+
+    }
+
+    fun receivedAboutDataFromActivity(item : CoinAboutItem){
+
+        view.setAboutData(item)
 
     }
 
